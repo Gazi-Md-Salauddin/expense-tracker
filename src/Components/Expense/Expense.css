@@ -1,0 +1,64 @@
+#root {
+  max-width: 1126px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  font-size: 20px;
+}
+
+body{
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+}
+h1{
+  text-align: center;
+  color: black;
+}
+
+.card-container {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  
+}
+
+.total {
+  background-color: blue;
+  grid-column: 1/-1;
+}
+  
+.card {
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+}
+
+.income-card{
+  color: green;
+}
+.income-btn{
+  background-color: green;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 0;
+}
+
+.expense-card{
+  color: red;
+}
+.expense-btn{
+  background-color: red;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 0;
+}
