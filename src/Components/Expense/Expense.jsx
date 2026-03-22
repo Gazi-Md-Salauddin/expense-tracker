@@ -6,6 +6,7 @@ const Expense = () => {
   const [expense, setExpense] = useState(0);
   const [modalType, setModalType] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [history, setHistory] = useState([]);
 
   return (
     <>
@@ -28,10 +29,23 @@ const Expense = () => {
         
         <button className="expense-btn" onClick={() => {setModalType("expense"); setShowModal(true)}}>Add Expense</button>
       </div>
+      
+      <div className="history">
+        <h2 className="history-title">History</h2>
+        <ul className="history-list">
+          {history.map((item) => (
+          <li className="list" key={item.id} style={{color: item.type === "income" ? "green" : "red"}}>
+            {item.type === "income" ? "+" : "-"} {item.amount} <span>{item.date}</span>
+          </li>
+          ))}
+          
+        </ul>
+      </div>
      <Modal showModal={showModal}
       setShowModal={setShowModal}
       setIncome={setIncome}
       setExpense={setExpense}
+      setHistory={setHistory}
       modalType={modalType}/>
     </>
   )
