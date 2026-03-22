@@ -31,7 +31,7 @@ h1{
 }
 
 .total {
-  background-color: blue;
+  color: blue;
   grid-column: 1/-1;
 }
   
@@ -39,8 +39,8 @@ h1{
   padding: 15px;
   text-align: center;
   border-radius: 8px;
-  color: white;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+  background-color: white;
+  box-shadow: 2px 2px 5px #000000ea;
 }
 
 .income-card{
